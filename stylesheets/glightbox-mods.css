@@ -1,0 +1,178 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright (C) 2026 AGENT-047185 (JD) */
+
+/* GlightBox mods + integration for Zensical */
+
+/* ==================== POSITION =================== */
+
+/* mobile overlay */
+.gslide-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+}
+
+/* captions below on Desktop */
+@media (min-width: 768px) {
+  .gslide-description {
+    position: relative;
+    margin-top: 12px;
+  }
+}
+
+/* =============== GLIGHTBOX CAPTIONS ============== */
+
+.glightbox-clean .gdesc-inner {
+  padding: 14px 16px;
+  border-radius: 14px;
+
+  /* fallback */
+  background: rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  max-width: 700px;
+  margin: 0 auto;
+
+  /* targeted transition */
+  transition: backdrop-filter 0.25s ease, box-shadow 0.25s ease;
+
+  /* unified glow */
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,0.35),
+    0 0 25px rgba(59,130,246,0.25),
+    0 10px 35px rgba(0,0,0,0.2);
+}
+
+/* =================== DARK MODE =================== */
+
+[data-md-color-scheme="slate"] .glightbox-container .gdesc-inner {
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.25)
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,0.15),
+    0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* =================== LIGHT MODE =================== */
+
+[data-md-color-scheme="default"] .glightbox-container .gdesc-inner {
+  background: rgba(255,255,255,0.45);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,0.25),
+    0 0 20px rgba(59,130,246,0.15),
+    0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* ====================== TEXT ====================== */
+
+.glightbox-container .gslide-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.glightbox-container .gslide-desc {
+  font-size: 0.95rem;
+}
+
+/* DARK TEXT */
+[data-md-color-scheme="slate"] .glightbox-container .gslide-title,
+[data-md-color-scheme="slate"] .glightbox-container .gslide-desc {
+  color: rgba(255,255,255,0.9);
+}
+
+/* LIGHT TEXT */
+[data-md-color-scheme="default"] .glightbox-container .gslide-title {
+  color: rgba(0,0,0,0.95);
+}
+
+[data-md-color-scheme="default"] .glightbox-container .gslide-desc {
+  color: rgba(0,0,0,0.75);
+}
+
+/* ============ CAPTIONS (GRID / INLINE) ============ */
+
+.z-row a span,
+.z-grid a span {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 6px 10px;
+
+  border-radius: 10px;
+
+  /* fallback */
+  background: rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-size: 0.8rem;
+  text-align: center;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,0.2),
+    0 4px 15px rgba(59,130,246,0.15);
+}
+
+/* ================ FIX WRAPPER WIDTH =============== */
+
+.z-row a,
+.z-grid a {
+  display: inline-block;
+  width: auto;
+}
+
+/* ================= CAPTIONS THEME ================= */
+
+/* DARK */
+[data-md-color-scheme="slate"] .z-row a span,
+[data-md-color-scheme="slate"] .z-grid a span,
+[data-md-color-scheme="slate"] .z-caption {
+  background: rgba(0,0,0,0.35);
+  color: rgba(255,255,255,0.85);
+}
+
+/* LIGHT */
+[data-md-color-scheme="default"] .z-row a span,
+[data-md-color-scheme="default"] .z-grid a span,
+[data-md-color-scheme="default"] .z-caption {
+  background: rgba(255,255,255,0.6);
+  color: rgba(0,0,0,0.85);
+}
+
+/* ================= TEXT STRUCTURE ================= */
+
+.gslide-title {
+  margin-bottom: 6px;
+}
+
+.gslide-desc {
+  opacity: 0.9;
+}
+
+/* ========== MOBILE CAPTIONS READABILITY =========== */
+
+@media (max-width: 480px) {
+  .gslide-title {
+    font-size: 1rem;
+  }
+
+  .gslide-desc {
+    font-size: 0.85rem;
+  }
+}

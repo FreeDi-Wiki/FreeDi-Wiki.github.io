@@ -1,0 +1,266 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright (C) 2026 AGENT-047185 (JD) */
+
+/* ZENSICAL IMAGES MANAGEMENT SYSTEM (CORE) */
+
+/* =================== BASE ==================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= VARIABLES ================= */
+
+:root {
+  --z-gap: 1rem;
+  --z-radius: 12px;
+
+  --z-size-xs: 130px;
+  --z-size-sm: 150px;
+  --z-size-md: 250px;
+  --z-size-lg: 400px;
+  --z-size-xl: 500px;
+
+  --z-hover-scale: 1.05;
+  --z-hover-lift: -4px;
+
+  --z-shadow: 0 12px 30px rgba(0,0,0,0.35);
+
+  /* cohérence transitions */
+  --z-speed-fast: 0.2s;
+  --z-speed-slow: 0.4s;
+}
+
+/* =================== SIZES =================== */
+
+.z-xs { --z-size: var(--z-size-xs); }
+.z-sm { --z-size: var(--z-size-sm); }
+.z-md { --z-size: var(--z-size-md); }
+.z-lg { --z-size: var(--z-size-lg); }
+.z-xl { --z-size: var(--z-size-xl); }
+
+/* =================== IMAGE =================== */
+
+.z-inline img,
+.z-row img,
+.z-grid img,
+.z-single img {
+  display: block;
+  max-width: var(--z-size);
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: var(--z-radius);
+  transition: transform var(--z-speed-fast) ease, box-shadow var(--z-speed-fast) ease;
+}
+
+/* =================== HOVER =================== */
+
+.z-inline img:hover,
+.z-row img:hover,
+.z-grid img:hover {
+  transform: translateY(var(--z-hover-lift)) scale(var(--z-hover-scale));
+  box-shadow: var(--z-shadow);
+}
+
+/* ================== SPACING ================== */
+
+.z-gap-sm { --z-gap: 0.5rem; }
+.z-gap-md { --z-gap: 2rem; }
+.z-gap-lg { --z-gap: 3rem; }
+
+/* =================== ALIGN =================== */
+
+.z-v-top    { align-items: flex-start; }
+.z-v-center { align-items: center; }
+.z-v-bottom { align-items: flex-end; }
+
+.z-h-left   { justify-content: flex-start; }
+.z-h-center { justify-content: center; }
+.z-h-right  { justify-content: flex-end; }
+
+.z-h-between { justify-content: space-between; }
+.z-h-around  { justify-content: space-around; }
+
+/* ==================== ROW ==================== */
+
+.z-row {
+  display: flex;
+  gap: var(--z-gap);
+}
+
+.z-row > * {
+  flex: 0 0 auto;
+}
+
+/* ==================== GRID =================== */
+
+.z-grid {
+  display: grid;
+  gap: var(--z-gap);
+}
+
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.z-grid.z-h-left   { justify-items: start; }
+.z-grid.z-h-center { justify-items: center; }
+.z-grid.z-h-right  { justify-items: end; }
+
+.z-grid.z-v-top    { align-items: start; }
+.z-grid.z-v-center { align-items: center; }
+.z-grid.z-v-bottom { align-items: end; }
+
+/* =================== INLINE ================== */
+
+.z-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--z-gap);
+}
+
+.z-inline p {
+  margin: 0;
+}
+
+.z-inline a {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* =================== LINKS =================== */
+
+.z-row a,
+.z-grid a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: opacity var(--z-speed-fast) ease;
+}
+
+.z-row a:hover,
+.z-grid a:hover {
+  opacity: 0.9;
+}
+
+.z-row a span,
+.z-grid a span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ================== CAPTION ================== */
+
+.z-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* =================== VIEWER ================== */
+
+.z-viewer {
+  position: fixed;
+  inset: 0;
+
+  /* fallback */
+  background-color: rgba(0,0,0,0.75);
+
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000; /* plus propre que 9999 */
+
+  cursor: zoom-out;
+}
+
+.z-viewer img {
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: 12px;
+  box-shadow: 0 30px 100px rgba(0,0,0,0.9);
+}
+
+/* =================== SINGLE ================== */
+
+.z-single {
+  justify-content: center;
+}
+
+.z-single a {
+  display: flex;
+  justify-content: center;
+}
+
+/* ==================== PAN ==================== */
+
+.z-pan a,
+.z-pan-auto a,
+.z-pan-mouse a {
+  overflow: hidden;
+}
+
+.z-pan a img {
+  transition: transform var(--z-speed-slow) ease;
+}
+
+.z-pan a:hover img {
+  transform: translateY(var(--z-hover-lift)) scale(1.1) translateX(-8px);
+}
+
+.z-pan-auto a img {
+  transition: transform 0.6s ease;
+}
+
+.z-pan-auto a:hover img {
+  transform: scale(1.1) translateX(-12px);
+}
+
+.z-pan-mouse a img {
+  transition: transform var(--z-speed-fast) ease;
+  will-change: transform;
+}
+
+/* =================== ZOOM ==================== */
+
+.zoomi a,
+.zoomv a {
+  position: relative;
+}
+
+.zoomi a::after {
+  content: "🔍";
+}
+
+.zoomv a::after {
+  content: "▶";
+}
+
+.zoomi a::after,
+.zoomv a::after {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 16px;
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity var(--z-speed-fast) ease, transform var(--z-speed-fast) ease;
+}
+
+.zoomi a:hover::after,
+.zoomv a:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ===================  ==================== */

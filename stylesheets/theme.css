@@ -1,0 +1,112 @@
+/* FREEDI THEME for Zensical by Agent-047185 (JD) */
+
+/* ================= VARIABLES ================= */
+
+:root {
+  --z-primary: #3b82f6;
+
+  --z-primary-10: rgba(59,130,246,0.10);
+  --z-primary-18: rgba(59,130,246,0.18);
+  --z-primary-30: rgba(59,130,246,0.30);
+
+  --z-blur: 12px;
+  --z-speed: 0.3s;
+}
+
+/* ================= HEADER ================= */
+
+.md-header,
+.md-header[data-md-state="shadow"] {
+
+  /* fallback */
+  background-color: rgba(59,130,246,0.10);
+
+  backdrop-filter: blur(var(--z-blur));
+  -webkit-backdrop-filter: blur(var(--z-blur));
+
+  background: linear-gradient(
+    90deg,
+    var(--z-primary-18),
+    var(--z-primary-10)
+  );
+
+  border-bottom: 1px solid var(--z-primary-30);
+
+  box-shadow:
+    0 1px 0 rgba(59,130,246,0.25),
+    0 4px 15px rgba(59,130,246,0.25);
+
+  transition:
+    background var(--z-speed) ease,
+    backdrop-filter var(--z-speed) ease;
+}
+
+/* ================= FOOTER ================= */
+
+.md-footer-meta {
+
+  /* fallback */
+  background-color: rgba(59,130,246,0.10);
+
+  backdrop-filter: blur(var(--z-blur));
+  -webkit-backdrop-filter: blur(var(--z-blur));
+
+  border-top: 1px solid var(--z-primary-30);
+
+  box-shadow:
+    0 -1px 0 rgba(59,130,246,0.25),
+    0 -4px 15px rgba(59,130,246,0.15);
+
+  transition:
+    background var(--z-speed) ease,
+    backdrop-filter var(--z-speed) ease;
+}
+
+/* ================= DARK MODE ================= */
+
+[data-md-color-scheme="slate"] .md-header {
+  background: rgba(2, 6, 23, 0.7);
+}
+
+[data-md-color-scheme="slate"] footer.md-footer .md-footer-meta {
+  background: rgba(2, 6, 23, 0.6);
+}
+
+/* ================= LIGHT MODE ================= */
+
+[data-md-color-scheme="default"] .md-header {
+  background: linear-gradient(
+    90deg,
+    var(--z-primary-18),
+    var(--z-primary-10)
+  );
+}
+
+/* ================= LOGO ================= */
+
+.md-header__button.md-logo img {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 4px var(--z-primary));
+}
+
+/* ================= WALLPAPER ================= */
+
+.md-main {
+  position: relative;
+}
+
+.md-main::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  
+  background: url("/assets/wallpaper.webp") center / 500px no-repeat;
+
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* =================  ================= */
+
