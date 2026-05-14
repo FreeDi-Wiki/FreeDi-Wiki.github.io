@@ -2014,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slicer-setup/slicer-overview/" class="md-nav__link">
+      <a href="../../slicer-setup/slicer-optimization/" class="md-nav__link">
         
   
   
@@ -3253,15 +3253,15 @@
 <ul>
 <li>Go to the <strong>MACHINE</strong> tab:</li>
 </ul>
-<p><img alt="image" src="/images/post-setup/system-config/camera/vcm1.webp" /></p>
+<p><img alt="image" src="/images/first-steps/hardware-options/webcam-setup/vcm1.webp" /></p>
 <ul>
 <li>Open any <mark>.cfg</mark> file, you'll see a <strong>'DEVICES`</strong> button at the top:</li>
 </ul>
-<p><img alt="image" src="/images/post-setup/system-config/camera/vcm2.webp" /></p>
+<p><img alt="image" src="/images/first-steps/hardware-options/webcam-setup/vcm2.webp" /></p>
 <ul>
 <li>When clicking on it, you'll see the <mark>Devices</mark> menu. Select the <mark><strong>VIDEO</strong></mark> tab:</li>
 </ul>
-<p><img alt="image" src="/images/post-setup/system-config/camera/vcm3.webp" /></p>
+<p><img alt="image" src="/images/first-steps/hardware-options/webcam-setup/vcm3.webp" /></p>
 <ul>
 <li>
 <p>You can copy either the <mark><strong>Device path</strong></mark> or <mark><strong>Path by ID</strong></mark> with the little icon on the side.</p>
@@ -3270,8 +3270,8 @@
 <p>Then open your <code>crowsnest.conf</code> file and replace the <code>device:</code> line content by pasting what you copied previously:</p>
 </li>
 </ul>
-<p><img alt="image" src="/images/post-setup/system-config/camera/vcm4.webp" /></p>
-<p><img alt="image" src="/images/post-setup/system-config/camera/vcm5.webp" /></p>
+<p><img alt="image" src="/images/first-steps/hardware-options/webcam-setup/vcm4.webp" /></p>
+<p><img alt="image" src="/images/first-steps/hardware-options/webcam-setup/vcm5.webp" /></p>
 <ul>
 <li>
 <p><strong>TIP: don't go crazy with the resolution and max_fps as these can impact your MCU performance!</strong></p>
@@ -3280,7 +3280,7 @@
 <p>Now restart your firmware with the <strong><code>Firmware Restart</code></strong> button to apply the changes:</p>
 </li>
 </ul>
-<p><img alt="image" src="/images/post-setup/system-config/camera/vcm6.webp" /></p>
+<p><img alt="image" src="/images/first-steps/hardware-options/webcam-setup/vcm6.webp" /></p>
 </details>
 <details class="abstract">
 <summary>Verify via SSH:</summary>
@@ -3312,24 +3312,24 @@
 <li>(Optional) In KIAUH you can update if you are asked to by entering "y" <strong>and then redo step 2</strong>:</li>
 </ul>
 <p><div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/system-config/camera/kiauh1.webp" class="glightbox" data-gallery="kiauh">
-    <img src="/images/post-setup/system-config/camera/kiauh1.webp">
+  <a href="/images/first-steps/hardware-options/webcam-setup/kiauh1.webp" class="glightbox" data-gallery="kiauh">
+    <img src="/images/first-steps/hardware-options/webcam-setup/kiauh1.webp">
   </a>
 </div></p>
 <ul>
 <li>Enter "1" for installing and enter the user password:</li>
 </ul>
 <p><div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/system-config/camera/kiauh3.webp" class="glightbox" data-gallery="kiauh">
-    <img src="/images/post-setup/system-config/camera/kiauh3.webp">
+  <a href="/images/first-steps/hardware-options/webcam-setup/kiauh3.webp" class="glightbox" data-gallery="kiauh">
+    <img src="/images/first-steps/hardware-options/webcam-setup/kiauh3.webp">
   </a>
 </div></p>
 <ul>
 <li>Enter "14" to install crowsnest:</li>
 </ul>
 <p><div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/system-config/camera/kiauh4.webp" class="glightbox" data-gallery="kiauh">
-    <img src="/images/post-setup/system-config/camera/kiauh4.webp">
+  <a href="/images/first-steps/hardware-options/webcam-setup/kiauh4.webp" class="glightbox" data-gallery="kiauh">
+    <img src="/images/first-steps/hardware-options/webcam-setup/kiauh4.webp">
   </a>
 </div></p>
 <p>This will automatically download and install Crowsnest, which is responsible for managing the camera stream.</p>
@@ -3381,15 +3381,15 @@
 <li>Open the Mainsail settings:</li>
 </ol>
 <div class="z-row z-lg z-h-center z-single">
-  <img src="/images/post-setup/system-config/camera/cam1.webp">
+  <img src="/images/first-steps/hardware-options/webcam-setup/cam1.webp">
 </div>
 
 <ol>
 <li>Scroll down to <strong>WEBCAMS</strong> and click on <strong>ADD WEBCAM</strong>:</li>
 </ol>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/system-config/camera/cam2.webp" class="glightbox" data-gallery="solo">
-    <img src="/images/post-setup/system-config/camera/cam2.webp">
+  <a href="/images/first-steps/hardware-options/webcam-setup/cam2.webp" class="glightbox" data-gallery="solo">
+    <img src="/images/first-steps/hardware-options/webcam-setup/cam2.webp">
   </a>
 </div>
 
@@ -3472,7 +3472,7 @@
 </details>
 <hr />
 <h2 id="timelapse">Timelapse<a class="headerlink" href="#timelapse" title="Permanent link">&para;</a></h2>
-<p>Now that your camera is set up, you can enable <strong>timelapses</strong> by following the <a href="/pages/post-setup/addons/timelapse">Timelapse guide</a> to install and configure timelapse recording.</p>
+<p>Now that your camera is set up, you can enable <strong>timelapses</strong> by following the <a href="/pages/addons-updates/klipper-plugins/timelapse/">Timelapse guide</a> to install and configure timelapse recording.</p>
 
 
 
