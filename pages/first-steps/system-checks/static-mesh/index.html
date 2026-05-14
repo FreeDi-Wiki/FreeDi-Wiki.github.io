@@ -3379,7 +3379,7 @@ This feature was requested as an option (see: <a href="https://github.com/Phil19
   File Explorer → select print file → in the preview, disable the KAMP toggle.</li>
 </ul>
 <div class="z-row z-lg z-h-center z-single">
-    <img src="/images/post-setup/addons/static-mesh/static1.webp">
+    <img src="/images/first-steps/system-checks/static-mesh/static1.webp">
   </div>
 
 <ul>
@@ -3400,8 +3400,8 @@ This feature was requested as an option (see: <a href="https://github.com/Phil19
 2.  Click the <strong>Home</strong> (house) icon to home the printer.
 3. Click <strong>CALIBRATE</strong> to probe the mesh.</p>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/addons/static-mesh/static2.webp" class="glightbox" data-gallery="solo1">
-    <img src="/images/post-setup/addons/static-mesh/static2.webp">
+  <a href="/images/first-steps/system-checks/static-mesh/static2.webp" class="glightbox" data-gallery="solo1">
+    <img src="/images/first-steps/system-checks/static-mesh/static2.webp">
   </a>
 </div>
 
@@ -3409,8 +3409,8 @@ This feature was requested as an option (see: <a href="https://github.com/Phil19
 <li>When prompted for a profile name, you must use: <code>STATIC_MESH</code> (this name is required so the macro can find it).</li>
 </ol>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/addons/static-mesh/static3.webp" class="glightbox" data-gallery="solo2">
-    <img src="/images/post-setup/addons/static-mesh/static3.webp">
+  <a href="/images/first-steps/system-checks/static-mesh/static3.webp" class="glightbox" data-gallery="solo2">
+    <img src="/images/first-steps/system-checks/static-mesh/static3.webp">
   </a>
 </div>
 
@@ -3419,21 +3419,21 @@ This feature was requested as an option (see: <a href="https://github.com/Phil19
    Then, click on SAVE CONFIG to store it to your printer.cfg.</li>
 </ol>
 <div class="z-row z-sm z-h-center z-single">
-  <img src="/images/post-setup/addons/static-mesh/static4.webp">
+  <img src="/images/first-steps/system-checks/static-mesh/static4.webp">
 </div>
 
 <p>After klipper restarted, you should be able to see the created STATIC_MESH on the right side.
 You can visualise it using the "load mesh" icon:</p>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/addons/static-mesh/static5.webp" class="glightbox" data-gallery="solo3">
-    <img src="/images/post-setup/addons/static-mesh/static5.webp">
+  <a href="/images/first-steps/system-checks/static-mesh/static5.webp" class="glightbox" data-gallery="solo3">
+    <img src="/images/first-steps/system-checks/static-mesh/static5.webp">
   </a>
 </div>
 
 <p>If you did a very poor job like I did for the purpose of this guide, you will see something like this:</p>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/addons/static-mesh/static6.webp" class="glightbox" data-gallery="solo4">
-    <img src="/images/post-setup/addons/static-mesh/static6.webp">
+  <a href="/images/first-steps/system-checks/static-mesh/static6.webp" class="glightbox" data-gallery="solo4">
+    <img src="/images/first-steps/system-checks/static-mesh/static6.webp">
   </a>
 </div>
 
@@ -3442,8 +3442,8 @@ You can visualise it using the "load mesh" icon:</p>
 <p>Open your slicer and inspect the <strong>Start G-code</strong>.<br>
 Example for reference in Orca Slicer:<br></p>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/post-setup/addons/static-mesh/static7.webp" class="glightbox" data-gallery="solo5">
-    <img src="/images/post-setup/addons/static-mesh/static7.webp">
+  <a href="/images/first-steps/system-checks/static-mesh/static7.webp" class="glightbox" data-gallery="solo5">
+    <img src="/images/first-steps/system-checks/static-mesh/static7.webp">
   </a>
 </div>
 
@@ -3463,7 +3463,7 @@ Example for reference in Orca Slicer:<br></p>
 <h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">&para;</a></h2>
 <p>These are <strong>examples</strong> that were current at the time this wiki page was written, but they can change regularly.<br>
 The up-to-date configuration examples can always be found here: <a href="https://github.com/Phil1988/FreeDi/tree/master/config_section">FreeDi configuration files</a></p>
-<p>You can check and feel free to use the <a href="/pages/post-setup/addons/static-mesh/#device-specific-examples">Device-specific examples</a>.</p>
+<p>You can check and feel free to use the <a href="/pages/first-steps/system-checks/static-mesh/#device-specific-examples">Device-specific examples</a>.</p>
 <h3 id="macro-concept-for-using-a-static-mesh">Macro concept for using a static mesh<a class="headerlink" href="#macro-concept-for-using-a-static-mesh" title="Permanent link">&para;</a></h3>
 <h4 id="adding-the-core-macro-next_print_static_mesh">Adding the core macro: NEXT_PRINT_STATIC_MESH<a class="headerlink" href="#adding-the-core-macro-next_print_static_mesh" title="Permanent link">&para;</a></h4>
 <p>Add this to your <code>macros.cfg</code> if it's not included yet. It sets a flag so the next print uses the stored <code>STATIC_MESH</code> profile instead of adaptive meshing:</p>
