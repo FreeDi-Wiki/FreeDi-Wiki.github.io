@@ -3176,7 +3176,7 @@
 </div>
 <hr />
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
-<p>Please follow the steps below carefully! Come to our <a href="/pages/community/community/#join-us-on-discord">Discord channel</a> if you run into an issue.</p>
+<p>Please follow the steps below carefully! Come to our <a href="/pages/help-community/discord-github/#join-us-on-discord">Discord channel</a> if you run into an issue.</p>
 <h3 id="installing-the-os-armbian">Installing the OS (Armbian)<a class="headerlink" href="#installing-the-os-armbian" title="Permanent link">&para;</a></h3>
 <p>Thanks to redrathnure <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> there is a great Armbian based OS that we can use as a foundation. So download the latest <a href="https://github.com/redrathnure/armbian-mkspi/releases" target="_blank">Armbian MKSPI release</a> to get started.</p>
 <details class="abstract">
@@ -3224,8 +3224,8 @@ cd ~ &amp;&amp; git clone https://github.com/dw-0/kiauh.git
 </ul>
 <p>If you do have a webcam, also install <strong>Crowsnest</strong>.</p>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/home/advanced-install/manual-setup/kiauh.webp" class="glightbox" data-gallery="0">
-    <img src="/images/home/advanced-install/manual-setup/kiauh.webp">
+  <a href="/images/installation/advanced-install/os-firmware/kiauh.webp" class="glightbox" data-gallery="0">
+    <img src="/images/installation/advanced-install/os-firmware/kiauh.webp">
   </a>
 </div>
 
@@ -3235,8 +3235,8 @@ cd ~ &amp;&amp; git clone https://github.com/dw-0/kiauh.git
 <p>Now you should be able to access your printer via a web browser, and see the Mainsail web interface. </p>
 <p>It will show you an error like this:</p>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/home/advanced-install/manual-setup/01.webp" class="glightbox" data-gallery="1">
-    <img src="/images/home/advanced-install/manual-setup/01.webp">
+  <a href="/images/installation/advanced-install/os-firmware/01.webp" class="glightbox" data-gallery="1">
+    <img src="/images/installation/advanced-install/os-firmware/01.webp">
   </a>
 </div>
 
@@ -3253,9 +3253,9 @@ cd ~ &amp;&amp; git clone https://github.com/dw-0/kiauh.git
 make menuconfig
 </code></pre></div></p>
 <p>Set everything according to this screenshot:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/13.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/13.webp" /></p>
 <p>Quit with <span class="keys"><kbd class="key-q">Q</kbd></span> and save with <span class="keys"><kbd class="key-y">Y</kbd></span></p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/14_1.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/14_1.webp" /></p>
 <p>Now we clean the workspace first and then compile with all 4 cores:
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3310,23 +3310,23 @@ make menuconfig
 <details class="abstract">
 <summary>configuring Katapult for X3 series:</summary>
 <p>First, make sure to build a katapult deployment application with the right settings:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/04.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04.webp" /></p>
 <p>Finish by hitting <span class="keys"><kbd class="key-q">Q</kbd></span> and save with <span class="keys"><kbd class="key-y">Y</kbd></span>:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/04_3.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_3.webp" /></p>
 </details>
 <details class="abstract">
 <summary>configuring Katapult for Q1 pro:</summary>
 <p>First, make sure to build a katapult deployment application with the right settings:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/04_1.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_1.webp" /></p>
 <p>Finish by hitting <span class="keys"><kbd class="key-q">Q</kbd></span> then save with <span class="keys"><kbd class="key-y">Y</kbd></span>:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/04_3.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_3.webp" /></p>
 </details>
 <details class="abstract">
 <summary>configuring Katapult for Plus 4:</summary>
 <p>First, make sure to build a katapult deployment application with the right settings:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/04_2.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_2.webp" /></p>
 <p>Finish by hitting <span class="keys"><kbd class="key-q">Q</kbd></span> and save with <span class="keys"><kbd class="key-y">Y</kbd></span>:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/04_3.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_3.webp" /></p>
 </details>
 <hr />
 <details class="abstract">
@@ -3336,7 +3336,7 @@ make menuconfig
 make -j4
 </code></pre></div>
 You should see something like this:
-<img alt="image" src="/images/home/advanced-install/manual-setup/05.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/05.webp" /></p>
 <ul>
 <li>
 <p>X3 series &amp; Q1 pro: a <code>katapult.u2f</code> file is created inside the <mark>/Katapult/out</mark> folder.</p>
@@ -3356,7 +3356,7 @@ You should see something like this:
 <li>Press and release the "reset“ button.</li>
 <li>Release the "boot“ button.</li>
 </ul>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/boot.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/boot.webp" /></p>
 </details>
 <hr />
 <details class="abstract">
@@ -3365,14 +3365,14 @@ You should see something like this:
 <div class="highlight"><pre><span></span><code>ls /dev/serial/by-id/*
 </code></pre></div></p>
 <p>You should see this:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/06.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/06.webp" /></p>
 <p>To flash the katapult bootloader, run:
 <div class="highlight"><pre><span></span><code>sudo mount /dev/sda1 /mnt
 systemctl daemon-reload
 </code></pre></div>
-<img alt="image" src="/images/home/advanced-install/manual-setup/07.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/07.webp" /></p>
 <p>You will be asked to authenticate by entering the password:</p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/08.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/08.webp" /></p>
 <p>Now flash katapult to the RP2040 and unmount it:
 <div class="highlight"><pre><span></span><code>sudo cp out/katapult.uf2 /mnt
 sudo umount /mnt
@@ -3438,9 +3438,9 @@ sudo cp ~/FreeDi/mainboard_and_toolhead_firmwares/v0.12.0-458/Toolhead_Q1_katapu
 make menuconfig
 </code></pre></div>
 <p>Set it according to the screenshot below:
-<img alt="image" src="/images/home/advanced-install/manual-setup/09.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/09.webp" /></p>
 <p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
-<p><img alt="image" src="/images/home/advanced-install/manual-setup/04_3.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_3.webp" /></p>
 <p>Then run:</p>
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3538,8 +3538,8 @@ python3 ~/katapult/scripts/flashtool.py -b 250000 -d /dev/ttyS2 -f ~/klipper/out
 </details>
 <p>Now if you go to the machine settings of mainsail, you will see the current klipper version of the sub systems:</p>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/home/advanced-install/manual-setup/15.webp" class="glightbox" data-gallery="2">
-    <img src="/images/home/advanced-install/manual-setup/15.webp">
+  <a href="/images/installation/advanced-install/os-firmware/15.webp" class="glightbox" data-gallery="2">
+    <img src="/images/installation/advanced-install/os-firmware/15.webp">
   </a>
 </div>
 
