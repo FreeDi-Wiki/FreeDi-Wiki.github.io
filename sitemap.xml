@@ -121,19 +121,19 @@
         <loc>https://freedi-wiki.github.io/pages/addons-updates/advanced-config/custom-config/</loc>
       </url>
       <url>
-        <loc>https://freedi-wiki.github.io/pages/help-community/community/discord-github/</loc>
-      </url>
-      <url>
-        <loc>https://freedi-wiki.github.io/pages/help-community/community/feature-request/</loc>
-      </url>
-      <url>
-        <loc>https://freedi-wiki.github.io/pages/help-community/get-help/faq/</loc>
-      </url>
-      <url>
-        <loc>https://freedi-wiki.github.io/pages/help-community/get-help/bugs/</loc>
+        <loc>https://freedi-wiki.github.io/pages/help-community/discord-github/</loc>
       </url>
       <url>
         <loc>https://freedi-wiki.github.io/pages/help-community/support/</loc>
+      </url>
+      <url>
+        <loc>https://freedi-wiki.github.io/pages/help-community/bugs/</loc>
+      </url>
+      <url>
+        <loc>https://freedi-wiki.github.io/pages/help-community/feature-request/</loc>
+      </url>
+      <url>
+        <loc>https://freedi-wiki.github.io/pages/help-community/faq/</loc>
       </url>
       <url>
         <loc>https://freedi-wiki.github.io/pages/help-community/credits/</loc>

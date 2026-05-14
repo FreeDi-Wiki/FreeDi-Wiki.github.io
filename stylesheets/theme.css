@@ -13,6 +13,30 @@
   --z-speed: 0.3s;
 }
 
+/* ================= HEADER TITLE FIX ================= */
+
+.md-header__topic {
+  font-weight: 700;
+}
+
+.md-header__topic + .md-header__topic {
+  font-weight: 700;
+}
+
+/* ================= ALWAYS SHOW PAGE TITLE ================= */
+
+/* Hide site_name ("FreeDi Wiki") */
+.md-header__topic:first-child {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Always show page title */
+.md-header__topic + .md-header__topic {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
 /* ================= HEADER ================= */
 
 .md-header,
