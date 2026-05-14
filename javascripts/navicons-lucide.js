@@ -6,16 +6,21 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const iconMap = {
-    "Features": "sparkles",
     "Before You Start": "file-text",
     "Easy Installation": "settings",
     "Advanced Installation": "zap",
+
     "Calibration": "ruler",
-    "Klipper Configuration": "cpu",
-    "Addons & Plugins": "puzzle",
-    "Slicer Adjustments": "sliders",
-    "Updating your printer": "refresh-cw",
-    "System Configuration": "list-chevrons-up-down",
+    "System checks & Extras": "file-check-corner",
+    "Hardware Options": "toolbox",
+    "Slicer Setup": "layers",
+    "Understanding Your Config": "file-cog",
+
+    "Staying Up to Date": "rss",
+    "Klipper Plugins": "puzzle",
+    "Advanced Configuration": "sliders",
+
+    "Learn": "graduation-cap",
   };
 
   const items = document.querySelectorAll(
@@ -43,3 +48,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+ 
