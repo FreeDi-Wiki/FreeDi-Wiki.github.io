@@ -3246,19 +3246,24 @@ If you are having a hard time rolling back, simply <a href="/pages/help-communit
 <hr />
 <h2 id="flashing-the-display-firmware">Flashing the Display Firmware<a class="headerlink" href="#flashing-the-display-firmware" title="Permanent link">&para;</a></h2>
 <h4 id="download-the-qidi-tft-firmware">Download the QIDI TFT Firmware<a class="headerlink" href="#download-the-qidi-tft-firmware" title="Permanent link">&para;</a></h4>
-<p><strong>X-Smart3 owners:</strong><br />
-   Download the QIDI TFT Firmware.<br />
-   It is hidden in the <mark>SMART_V4.1.13.rar</mark> of one <a href="https://github.com/QIDITECH/QIDI_SMART3/releases/tag/Smart_V4.1.13">specific release</a> only.<br />
-   Unzip it and find the <mark>xindi_480_272.tft</mark> file.<br />
-   Rename it to <mark>stock_firmware.tft</mark> to follow this guide.</p>
-<p><strong>X-Plus3 owners:</strong><br />
-   Download the QIDI TFT Firmware. You can find it in QIDI's <a href="https://github.com/QIDITECH/QIDI_PLUS3/blob/main/UI/800_480_PLUS.tft">Plus3 repository</a>.<br />
-   Download the <mark>800_480_PLUS.tft</mark> as <strong>Raw</strong> file (Important! Really use <code>Raw</code> file to download it 😉)<br />
-   Rename it to <mark>stock_firmware.tft</mark> to follow this guide.</p>
-<p><strong>X-Max3 owners:</strong><br />
-   Download the QIDI TFT Firmware. It is hidden in one <a href="https://github.com/QIDITECH/QIDI_MAX3/blob/MAX3_V4.3.13/UI/800_480_MAX.tft">specific branch</a> only.<br />
-   Download the <mark>800_480_PLUS.tft</mark> as <strong>Raw</strong> file (Important! Really use <code>Raw</code> file to download it 😉)<br />
-   Rename it to <mark>stock_firmware.tft</mark> to follow this guide.</p>
+<details class="note">
+<summary><strong>X-Smart3 owners:</strong></summary>
+<p>Download the QIDI TFT Firmware. It is hidden in the <mark>SMART_V4.1.13.rar</mark> of one <a href="https://github.com/QIDITECH/QIDI_SMART3/releases/tag/Smart_V4.1.13">specific release</a> only.<br />
+Unzip it and find the <mark>xindi_480_272.tft</mark> file.<br />
+Rename it to <mark>stock_firmware.tft</mark> to follow this guide.</p>
+</details>
+<details class="note">
+<summary><strong>X-Plus3 owners:</strong></summary>
+<p>Download the QIDI TFT Firmware. You can find it in QIDI's <a href="https://github.com/QIDITECH/QIDI_PLUS3/blob/main/UI/800_480_PLUS.tft">Plus3 repository</a>.<br />
+Download the <mark>800_480_PLUS.tft</mark> as <strong>Raw</strong> file (Important! Really use <code>Raw</code> file to download it 😉)<br />
+Rename it to <mark>stock_firmware.tft</mark> to follow this guide.</p>
+</details>
+<details class="note">
+<summary><strong>X-Max3 owners:</strong></summary>
+<p>Download the QIDI TFT Firmware. It is hidden in one <a href="https://github.com/QIDITECH/QIDI_MAX3/blob/MAX3_V4.3.13/UI/800_480_MAX.tft">specific branch</a> only.<br />
+Download the <mark>800_480_PLUS.tft</mark> as <strong>Raw</strong> file (Important! Really use <code>Raw</code> file to download it 😉)<br />
+Rename it to <mark>stock_firmware.tft</mark> to follow this guide.</p>
+</details>
 <h4 id="copy-the-firmware-to-the-printer">Copy the firmware to the printer<a class="headerlink" href="#copy-the-firmware-to-the-printer" title="Permanent link">&para;</a></h4>
 <p>Transfer the downloaded TFT firmware to your FreeDi installation folder (~/FreeDi/screen_firmwares/).
 You can do this using WinSCP or MobaXterm.</p>
@@ -3304,9 +3309,14 @@ Wait for the process to complete (approximately 8-10 minutes).</p>
 <li>It may take several tries before the printer succeeds in flashing the firmware (reason is the weak serial hardware).</li>
 </ul>
 </div>
-<p>If successful, the display should show the stock firmware version and likely show the error "THE SYSTEM STARTS ABNORMALLY". <br />
-‼️ PICTURE stock_starts_abnormally.png ‼️<br />
-This is expected behavior because the screen firmware is now stock and can't get find the stock QIDI software on the system.</p>
+<p>If successful, the display should show the stock firmware version and likely show the error "THE SYSTEM STARTS ABNORMALLY".   </p>
+<div class="z-row z-lg z-h-center z-single zoomi">
+  <a href="/images/restore-stock/stock_starts_abnormally.webp" class="glightbox" data-gallery="1">
+    <img src="/images/restore-stock/stock_starts_abnormally.webp">
+  </a>
+</div>
+
+<p>This is expected behavior because the screen firmware is now stock and can't get find the stock QIDI software on the system.</p>
 <hr />
 <h2 id="getting-the-precompiled-firmware-binaries">Getting the precompiled firmware binaries<a class="headerlink" href="#getting-the-precompiled-firmware-binaries" title="Permanent link">&para;</a></h2>
 <p>Now that the display is flashed, it is time to get the firmware binaries for the mainboard and the toolhead.<br />
@@ -3320,34 +3330,63 @@ We will need the <mark>X_4.bin</mark> later.</p>
 <hr />
 <h2 id="flashing-the-toolhead-mcu-firmware">Flashing the Toolhead MCU Firmware<a class="headerlink" href="#flashing-the-toolhead-mcu-firmware" title="Permanent link">&para;</a></h2>
 <p>We need to bring the toolhead into "RP2 Boot" mode.</p>
-<p>Remove the back cover of the toolhead.
-Find the RESET and BOOT buttons.
-Here is an example image to help you locate the buttons:<br />
-‼️ PICTURE Toolhead_X3.png ‼️<br />
-It might look different for your toolhead, as different revisions have been installed in the machines.</p>
+<p>Remove the back cover of the toolhead.</p>
+<p>Find the RESET and BOOT buttons.</p>
+<p>Here is an example image to help you locate the buttons:  </p>
+<div class="z-row z-lg z-h-center z-single zoomi">
+  <a href="/images/restore-stock/Toolhead_X3.webp" class="glightbox" data-gallery="2">
+    <img src="/images/restore-stock/Toolhead_X3.webp">
+  </a>
+</div>
+
+<p>It might look different for your toolhead, as different revisions have been installed in the machines.</p>
 <p>To put the toolhead into "RP2 Boot" mode, follow one these steps (whatever is easier for you):</p>
-<p>Press and hold the „BOOT“ button.
-Press and release the „RESET“ button.
-Release the „BOOT“ button.</p>
+<ul>
+<li>Press and hold the „BOOT“ button.</li>
+<li>Press and release the „RESET“ button.</li>
+<li>Release the „BOOT“ button.</li>
+</ul>
 <p>OR</p>
-<p>Shut off the printer.
-Press and hold the boot button.
-Switch the printer on and then release the boot button.</p>
+<ul>
+<li>Shut off the printer.</li>
+<li>Press and hold the boot button.</li>
+<li>Switch the printer on and then release the boot button.</li>
+</ul>
 <p>Verify if its really in "RP2 Boot" mode. You can do this by connecting via ssh to the printer and run:
 <div class="highlight"><pre><span></span><code>lsusb
 </code></pre></div></p>
-<p>This means it is in boot mode:<br />
-‼️ PICTURE TH_in_boot_mode.png ‼️<br />
-This means it NOT in boot mode:<br />
-‼️ PICTURE TH_not_in_boot_mode.png ‼️  </p>
+<p>This means it is in boot mode:  </p>
+<div class="z-row z-lg z-h-center z-single zoomi">
+  <a href="/images/restore-stock/TH_in_boot_mode.webp" class="glightbox" data-gallery="3">
+    <img src="/images/restore-stock/TH_in_boot_mode.webp">
+  </a>
+</div>
+
+<p>This means it NOT in boot mode:  </p>
+<div class="z-row z-lg z-h-center z-single zoomi">
+  <a href="/images/restore-stock/TH_not_in_boot_mode.webp" class="glightbox" data-gallery="4">
+    <img src="/images/restore-stock/TH_not_in_boot_mode.webp">
+  </a>
+</div>
+
 <p>Run lsblk and see if you can find a partition at 128MB size:
 <div class="highlight"><pre><span></span><code>lsblk
 </code></pre></div></p>
-<p>This means it is in boot mode and the partition is <mark>sda1</mark>:<br />
-‼️ PICTURE TH_in_boot_mode_sda1.png ‼️  </p>
-<p>This means it NOT in boot mode:<br />
-‼️ PICTURE TH_not_in_boot_mode_sda1.png ‼️<br />
-If thats the case, go back and repeat the steps to put the toolhead into "RP2 Boot" mode.</p>
+<p>This means it is in boot mode and the partition is <mark>sda1</mark>:  </p>
+<div class="z-row z-lg z-h-center z-single zoomi">
+  <a href="/images/restore-stock/TH_in_boot_mode_sda1.webp" class="glightbox" data-gallery="5">
+    <img src="/images/restore-stock/TH_in_boot_mode_sda1.webp">
+  </a>
+</div>
+
+<p>This means it NOT in boot mode:  </p>
+<div class="z-row z-lg z-h-center z-single zoomi">
+  <a href="/images/restore-stock/TH_not_in_boot_mode_sda1.webp" class="glightbox" data-gallery="6">
+    <img src="/images/restore-stock/TH_not_in_boot_mode_sda1.webp">
+  </a>
+</div>
+
+<p>If thats the case, go back and repeat the steps to put the toolhead into "RP2 Boot" mode.</p>
 <div class="admonition warning">
 <p class="admonition-title">IMPORTANT</p>
 <p>Make sure you use the correct partition in the next command.
@@ -3376,7 +3415,7 @@ Turn the printer on and wait ~10s for the flashing process to complete and then 
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>If the TFT display remains stuck during the flashing process, restart the printer and try again.</p>
 <p>I also want to mention the nice guide of my buddy billkenney who created the <a href="https://github.com/billkenney/revert_qidi_software">revert_qidi_software</a> project and the <a href="https://github.com/billkenney/qidi_3series_recovery">qidi_3series_recovery</a> project.</p>
-<p>If any issues persist, get in touch with the <a href="/pages/help-community/discord-github/">FreeDi community</a> for assistance.</p>
+<p>If any issues persist, get in touch with the <a href="/pages/help-community/discord-github/">FreeDi community</a> for assistance.*</p>
 
 
 
