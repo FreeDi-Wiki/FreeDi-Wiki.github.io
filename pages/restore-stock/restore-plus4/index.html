@@ -3265,13 +3265,16 @@ Unkind messages are not acceptable, regardless of your frustration. <br />
 If you are having a hard time rolling back, simply <a href="../../pages/help-community/community/discord-github/">get in touch with us</a> - preferably on Discord - and we can help you out 😊.</p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>To complete the rollback to stock firmware, you will need to perform the following steps:</p>
+<div class="admonition info">
+<p class="admonition-title">To complete the rollback to stock firmware:</p>
+<p>you will need to perform the following steps:</p>
 <ol>
 <li><strong>Flash Stock Display Firmware</strong> - Restore the touchscreen interface to QIDI's original firmware</li>
 <li><strong>Flash Precompiled Toolhead MCU Firmware</strong> - Restore the toolhead microcontroller firmware</li>
 <li><strong>Flash Precompiled Mainboard MCU Firmware</strong> - Restore the mainboard microcontroller firmware</li>
 <li><strong>Flash Stock Operating System to eMMC</strong> - Install QIDI's original OS onto the internal storage</li>
 </ol>
+</div>
 <hr />
 <h2 id="flashing-the-display-firmware">Flashing the Display Firmware<a class="headerlink" href="#flashing-the-display-firmware" title="Permanent link">&para;</a></h2>
 <h4 id="download-the-qidi-tft-firmware">Download the QIDI TFT Firmware<a class="headerlink" href="#download-the-qidi-tft-firmware" title="Permanent link">&para;</a></h4>
@@ -3372,8 +3375,8 @@ Turn the printer on and wait ~10s for the flashing process to complete and then 
 <p>In this case, follow <a href="https://wiki.qidi3d.com/en/PLUS4/Manual/firmware-update">QIDI's Plus4 Firmware Update instructions</a>.</p>
 </div>
 <div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/restore-stock/plus4/01.webp" class="glightbox" data-gallery="1">
-    <img src="/images/restore-stock/plus4/01.webp">
+  <a href="/images/restore-stock/plus4_screen.webp" class="glightbox" data-gallery="1">
+    <img src="/images/restore-stock/plus4_screen.webp">
   </a>
 </div>
 
@@ -3381,7 +3384,7 @@ Turn the printer on and wait ~10s for the flashing process to complete and then 
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>If the TFT display remains stuck during the flashing process, restart the printer and try again.</p>
 <p>Ensure the correct device paths are used during the MCU flashing process (e.g., <code>/dev/ttyS2</code> for the toolhead).</p>
-<p>If any issues persist, get in touch with the <a href="../../pages/help-community/community/discord-github/">FreeDi community</a> for assistance.</p>
+<p>If any issues persist, get in touch with the <a href="/pages/help-community/discord-github/">FreeDi community</a> for assistance.</p>
 
 
 
