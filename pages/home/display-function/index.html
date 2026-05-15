@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.webp">
-      <meta name="generator" content="zensical-0.0.41">
+      <meta name="generator" content="zensical-0.0.42">
     
     
       
@@ -2923,18 +2923,60 @@
 <h1 id="display-functionalities">Display Functionalities<a class="headerlink" href="#display-functionalities" title="Permanent link">&para;</a></h1>
 <h3 id="accessible-from-the-display">Accessible from the Display:<a class="headerlink" href="#accessible-from-the-display" title="Permanent link">&para;</a></h3>
 <details class="success">
+<summary><strong>On-Screen Installation Wizard</strong></summary>
+<ul>
+<li>Guided setup process directly on the display</li>
+<li>Helps the user through the initial printer setup</li>
+<li>Choose the specific printer model for accurate configuration</li>
+<li>Installs Wi-Fi modules as part of the setup flow</li>
+<li>Flashes Klipper to the required sub-systems</li>
+<li>Designed to get the printer ready to use with minimal manual intervention</li>
+</ul>
+</details>
+<details class="success">
+<summary><strong>Language Settings</strong></summary>
+<ul>
+<li>Change the interface language</li>
+<li>Supported languages include English, French, German, Italian, Portuguese, Spanish, and Russian</li>
+</ul>
+</details>
+<details class="success">
+<summary><strong>Display and System Settings</strong></summary>
+<ul>
+<li>Adjust screen brightness and dimmed brightness</li>
+<li>Set screen dim delay timing</li>
+<li>Set screen saver delay timing</li>
+<li>The display can first dim and later turn fully off based on user-defined timings</li>
+<li>Display state (on/dimmed/off) can be synchronized with the case light</li>
+<li>Enable or disable the buzzer sound</li>
+</ul>
+</details>
+<details class="success">
+<summary><strong>High Quality and Lightning-Fast Thumbnail Transmission</strong></summary>
+<ul>
+<li>Fast thumbnail transfer for near-instant print preview in the file explorer (~30 ms)</li>
+<li>Non blocking - browser fast through all your files with no "forced break" - life is too short for that ;)</li>
+<li>"Transparent thumbnails background" for nicer looks - no white background. You deserve better!</li>
+</ul>
+</details>
+<details class="success">
 <summary><strong>Temperature Control</strong></summary>
 <ul>
 <li>Set and monitor extruder temperature</li>
 <li>Set and monitor bed temperature</li>
 <li>Set and monitor chamber temperature</li>
+<li>Quick toggle control for nozzle, bed, and chamber heaters</li>
 </ul>
 </details>
 <details class="success">
-<summary><strong>Fan Control</strong></summary>
+<summary><strong>Fan and Light Control</strong></summary>
 <ul>
-<li>Control case light</li>
-<li>Adjust part fan, side fan, and filter fan speeds</li>
+<li>Set and monitor part fan speed</li>
+<li>Set and monitor filter fan speed (if available on your printer)</li>
+<li>Set and monitor side fan speed (if available on your printer)</li>
+<li>Quick toggle control for part fan, filter fan, and side fan</li>
+<li>Control case light (on/off/dim)</li>
+<li>Synchronize the case light with display dimming and screen saver behavior</li>
 </ul>
 </details>
 <details class="success">
@@ -2951,63 +2993,81 @@
 <li>Extrude or retract filament</li>
 <li>Use load and unload filament macros</li>
 <li>Enable or disable the filament sensor</li>
+<li>View filament status during a print job</li>
 </ul>
 </details>
 <details class="success">
-<summary><strong>Preset Temperature Profiles</strong></summary>
+<summary><strong>Custom On-Screen Macros</strong></summary>
 <ul>
-<li>Quick temperature presets for common materials: PLA, ABS/ASA, PETG, and TPU</li>
-</ul>
-</details>
-<details class="success">
-<summary><strong>Language Settings</strong></summary>
-<ul>
-<li>Change the interface language (supported languages include English, French, German, Italian, Portuguese, Spanish, and Russian)</li>
-</ul>
-</details>
-<details class="success">
-<summary><strong>System Management</strong></summary>
-<ul>
-<li>Restart Klipper</li>
-<li>Restart the firmware</li>
-<li>Restart the system</li>
-<li>Shut down the system</li>
+<li>Configure up to 4 custom macros (names and functions can be user-defined)</li>
+<li>Default presets are preheat macros for  PLA, ABS/ASA, PETG, and TPU</li>
+<li>Rename each macro to match your preferred workflow</li>
+<li>Customize each macro's behavior based on your own needs</li>
 </ul>
 </details>
 <details class="success">
 <summary><strong>Print Management</strong></summary>
 <ul>
 <li>Browse all saved G-code files and start print jobs</li>
-<li>Adjust Z-height (babystepping) during printing</li>
+<li>Browse files and folders in multiple directory levels</li>
+<li>Support for USB sticks with nested subfolders through the file explorer</li>
+<li>Sort files in the explorer, with default sorting by newest first or alternatively alphabetically</li>
+<li>Fast thumbnail transfer for near-instant print preview in the file explorer (~30 ms)</li>
 <li>Pause, resume, or stop a print job</li>
+<li>Adjust Z-height (babystepping) during printing</li>
+<li>Adjust flow during printing</li>
+<li>Adjust speed during printing</li>
+</ul>
+</details>
+<details class="success">
+<summary><strong>Print Job Status</strong></summary>
+<ul>
+<li>Display current layer and total layer count</li>
+<li>Show filament status</li>
+<li>Show remaining print time</li>
+<li>Show elapsed print time</li>
+<li>Display print preview thumbnail</li>
+<li>Display file name of the active print</li>
+<li>Show live temperatures for nozzle, bed, and chamber</li>
+<li>Show live fan speeds for part fan, filter fan, and side fan</li>
+<li>Show current flow setting</li>
+<li>Show current speed setting</li>
+</ul>
+</details>
+<details class="success">
+<summary><strong>System Management</strong></summary>
+<ul>
+<li>Restart Klipper</li>
+<li>Restart firmware</li>
+<li>Restart the system</li>
+<li>Shut down the system</li>
 </ul>
 </details>
 <details class="success">
 <summary><strong>Calibration and Tuning</strong></summary>
 <ul>
-<li>Calibrate Z-offset for optimal print quality</li>
+<li>Coarse Z-offset calibration</li>
+<li>Z-offset fine tuning using babystepping on a live print</li>
+<li>Input shaping</li>
+<li>Automated input shaping with the ability to save values and restart</li>
+<li>Bed meshing for optimal first-layer adhesion</li>
+<li>Automated bed meshing with saving mesh data and system restart</li>
+<li>Static Mesh: create and use a static bed mesh when the probe is unreliable or when adaptive meshing should be skipped to save time</li>
+</ul>
+</details>
+<details class="success">
+<summary><strong>System Status and Diagnostics</strong></summary>
+<ul>
 <li>Receive error messages and notifications, such as when the connection to Klippy is lost</li>
 <li>Access options to reconnect, restart, or shut down from a dedicated menu</li>
+<li>One-line terminal output on "prinjob screen" for debugging and deeper inspection</li>
+<li>Especially useful for users running Beacon, Cartographer, Eddy, or other advanced probes</li>
 </ul>
 </details>
 <details class="success">
-<summary><strong>Advanced Features</strong></summary>
+<summary><strong>Network and Connectivity</strong></summary>
 <ul>
-<li>Perform input shaping for vibration compensation</li>
-<li>Execute bed meshing for optimal first-layer adhesion</li>
 <li>Manage Wi-Fi network settings</li>
-<li>Toggle the filament sensor on or off</li>
-<li>Automated input shaping with the ability to save values and restart</li>
-<li>Automated bed meshing with saving mesh data and system restart</li>
-</ul>
-</details>
-<details class="success">
-<summary><strong>Display and System Settings</strong></summary>
-<ul>
-<li>Adjust screen brightness and dimmed brightness</li>
-<li>Set screen saver options and delay timings</li>
-<li>Enable or disable the buzzer sound</li>
-<li>Choose the specific printer model for accurate configuration</li>
 </ul>
 </details>
 
@@ -3141,7 +3201,7 @@
       <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.dbc0afdc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6e5f0216.min.js"></script>
       
         <script src="../../../javascripts/glightbox.js"></script>
       
