@@ -1838,15 +1838,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#klipper-configuraton" class="md-nav__link">
+  <a href="#klipper-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Klipper Configuraton
+        Klipper Configuration
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Klipper Configuraton">
+    <nav class="md-nav" aria-label="Klipper Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2982,15 +2982,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#klipper-configuraton" class="md-nav__link">
+  <a href="#klipper-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Klipper Configuraton
+        Klipper Configuration
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Klipper Configuraton">
+    <nav class="md-nav" aria-label="Klipper Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3129,14 +3129,14 @@
 
 
 <h1 id="cartographer-probe">Cartographer probe<a class="headerlink" href="#cartographer-probe" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
+<div class="admonition info">
 <p class="admonition-title"><strong>Requirements:</strong></p>
 <ul>
 <li>
 <p>You must be running FreeDi to use this guide.</p>
 </li>
 <li>
-<p>This guide is for <strong>X-Max 3</strong> printers only.</p>
+<p>This guide is for <strong>X-Max 3</strong>, but the same logic applies to every other printers: just be careful to find the correct values if you're not a X-max3 owner.</p>
 </li>
 </ul>
 </div>
@@ -3147,18 +3147,28 @@
 </div>
 <hr />
 <h2 id="mount-tool">Mount &amp; Tool<a class="headerlink" href="#mount-tool" title="Permanent link">&para;</a></h2>
-<p>Mount your Cartographer probe. It needs to be 2.6 to 3.0 mm above your nozzle. I used this mount from Printables:
-<a href="https://www.printables.com/model/692991-qidi-x-max-3-beacon-cartographer-probe-low-profile">X-max3 cartographer mount</a></p>
+<p>Mount your Cartographer probe. It needs to be <mark><strong>2.6 to 3.0 mm above your nozzle</strong></mark>. </p>
+<p>Here are some links for Cartographer mounts for QIDI printers from Printables:</p>
+<p><a href="https://www.printables.com/model/692991-qidi-x-max-3-beacon-cartographer-probe-low-profile">X-max3 cartographer mount</a></p>
+<p><a href="https://www.printables.com/model/1205523-qidi-q1-pro-cartographer-mount">Q1 pro cartographer mount</a></p>
+<p><a href="https://www.printables.com/model/1154767-cartographer3d-mount-for-qidi-plus-4">Plus 4 cartographer mount</a></p>
 <p>If you are unsure if you are 2.6mm - 3.0mm above the nozzle, you can print this file from Printables, with a fine layer height to
-take measurements: <a href="https://www.printables.com/model/1060868-cartographer-probe-nozzle-offset-tool/files">cartographer offset tool</a></p>
+take measurements: </p>
+<p><a href="https://www.printables.com/model/1060868-cartographer-probe-nozzle-offset-tool/files">cartographer offset tool</a></p>
 <hr />
 <h2 id="cartographer-official-guide">Cartographer official guide<a class="headerlink" href="#cartographer-official-guide" title="Permanent link">&para;</a></h2>
 <p>Cartographer 3D has a well detailed guide about all the installation and configuration process.</p>
+<div class="admonition warning">
+<p class="admonition-title">warning:</p>
+<p>As you already know, FreeDi is based on mainline klipper. So please follow the official guide, like any other printer. <strong>NOT THE QIDI SPECIFIC</strong> guide.</p>
+</div>
 <p>Follow the guide here on their <a href="https://docs.cartographer3d.com/">Official Cartographer Documentation</a></p>
 <hr />
-<h2 id="klipper-configuraton">Klipper Configuraton<a class="headerlink" href="#klipper-configuraton" title="Permanent link">&para;</a></h2>
+<h2 id="klipper-configuration">Klipper Configuration<a class="headerlink" href="#klipper-configuration" title="Permanent link">&para;</a></h2>
 <h4 id="editing-printercfg">Editing printer.cfg<a class="headerlink" href="#editing-printercfg" title="Permanent link">&para;</a></h4>
+<div class="admonition danger">
 <p>Below are the configuration changes needed inside your <code>printer.cfg</code> when using a Cartographer probe on QIDI X-max 3.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Comment out the entire [probe] section !</p>
 <p>Tip: when editing .cfg files inside Mainsail, select all the lines then press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-slash">/</kbd></span> . This will comment out all the lines at once!</p>
