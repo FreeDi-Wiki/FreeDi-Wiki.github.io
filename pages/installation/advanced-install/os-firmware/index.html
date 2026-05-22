@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.webp">
-      <meta name="generator" content="zensical-0.0.42">
+      <meta name="generator" content="zensical-0.0.43">
     
     
       
@@ -3253,9 +3253,9 @@ cd ~ &amp;&amp; git clone https://github.com/dw-0/kiauh.git
 make menuconfig
 </code></pre></div></p>
 <p>Set everything according to this screenshot:</p>
-<p><img alt="image" src="/images/installation/advanced-install/os-firmware/13.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/main1.webp" /></p>
 <p>Quit with <span class="keys"><kbd class="key-q">Q</kbd></span> and save with <span class="keys"><kbd class="key-y">Y</kbd></span></p>
-<p><img alt="image" src="/images/installation/advanced-install/os-firmware/14_1.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/main2.webp" /></p>
 <p>Now we clean the workspace first and then compile with all 4 cores:
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3451,7 +3451,7 @@ make -j4
 </ul>
 <div class="highlight"><pre><span></span><code>ls /dev/serial/by-id/*
 </code></pre></div>
-<p><img alt="image" src="/images/post-setup/system-updates/klipper-upd/katapult1.webp" /></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/11.webp" /></p>
 <ul>
 <li>Flash your toolhead with Katapult, replacing the ID with yours:</li>
 </ul>
@@ -3461,7 +3461,7 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ser
 <ul>
 <li>
 <p>If the update is successful, you should see this:
-<img alt="image" src="/images/post-setup/system-updates/klipper-upd/katapult2.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/12.webp" /></p>
 </li>
 <li>
 <p>Restart Klipper:</p>
@@ -3479,8 +3479,9 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ser
 make menuconfig
 </code></pre></div>
 <p>Set it according to the screenshot below:
-<img alt="image" src="/images/post-setup/system-updates/klipper-upd/q1th013.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/13.1.webp" /></p>
 <p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_3.webp" /></p>
 <p>Then run:</p>
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3494,7 +3495,7 @@ python3 ~/katapult/scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.b
 <ul>
 <li>
 <p>If the update is successful, you should see this:
-<img alt="image" src="/images/post-setup/system-updates/klipper-upd/katapult2.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/12.webp" /></p>
 </li>
 <li>
 <p>Restart Klipper:</p>
@@ -3512,8 +3513,9 @@ python3 ~/katapult/scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.b
 make menuconfig
 </code></pre></div>
 <p>Set it according to the screenshot below:
-<img alt="image" src="/images/post-setup/system-updates/klipper-upd/p4th013.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/14.webp" /></p>
 <p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/04_3.webp" /></p>
 <p>Then run:</p>
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3527,7 +3529,7 @@ python3 ~/katapult/scripts/flashtool.py -b 250000 -d /dev/ttyS2 -f ~/klipper/out
 <ul>
 <li>
 <p>If the update is successful, you should see this:
-<img alt="image" src="/images/post-setup/system-updates/klipper-upd/katapult2.webp" /></p>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/12.webp" /></p>
 </li>
 <li>
 <p>Restart Klipper:</p>

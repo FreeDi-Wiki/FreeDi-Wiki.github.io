@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.webp">
-      <meta name="generator" content="zensical-0.0.42">
+      <meta name="generator" content="zensical-0.0.43">
     
     
       
@@ -2398,56 +2398,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Troubleshooting Updates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#update-fails-with-dirty-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Update Fails with "DIRTY" Status
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#klipper-wont-start-after-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Klipper Won't Start After Update
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mcu-firmware-mismatch-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        MCU Firmware Mismatch Error
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#screen-firmware-appears-broken-after-interrupted-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Screen Firmware Appears Broken After Interrupted Update
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3374,56 +3324,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Troubleshooting Updates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#update-fails-with-dirty-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Update Fails with "DIRTY" Status
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#klipper-wont-start-after-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Klipper Won't Start After Update
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mcu-firmware-mismatch-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        MCU Firmware Mismatch Error
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#screen-firmware-appears-broken-after-interrupted-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Screen Firmware Appears Broken After Interrupted Update
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3817,33 +3717,43 @@ It can help to also check for other changes in the same time range or checking t
 </div>
 <hr />
 <h2 id="troubleshooting-updates">Troubleshooting Updates<a class="headerlink" href="#troubleshooting-updates" title="Permanent link">&para;</a></h2>
-<h3 id="update-fails-with-dirty-status">Update Fails with "DIRTY" Status<a class="headerlink" href="#update-fails-with-dirty-status" title="Permanent link">&para;</a></h3>
+<details class="bug">
+<summary>Update Fails with DIRTY Status</summary>
 <ul>
 <li>Click <strong>"Recover"</strong> in the Update Manager to reset to a clean state</li>
 <li>If recovery fails, reach out for help (see "Getting Help" section - coming soon)</li>
 </ul>
-<h3 id="klipper-wont-start-after-update">Klipper Won't Start After Update<a class="headerlink" href="#klipper-wont-start-after-update" title="Permanent link">&para;</a></h3>
+</details>
+<details class="bug">
+<summary>Klipper Won't Start After Update</summary>
 <ul>
 <li>Check the <strong>console</strong> in Mainsail for error messages</li>
 <li>Most likely cause: Config file incompatibility with new Klipper version</li>
 <li>Restore your backup config and check the release notes for breaking changes</li>
 <li>Compare your config with the default configs on GitHub</li>
 </ul>
-<h3 id="mcu-firmware-mismatch-error">MCU Firmware Mismatch Error<a class="headerlink" href="#mcu-firmware-mismatch-error" title="Permanent link">&para;</a></h3>
+</details>
+<details class="bug">
+<summary>MCU Firmware Mismatch Error</summary>
 <ul>
 <li>This happens when Klipper core was updated but the MCU firmware wasn't flashed yet</li>
 <li>Usually resolved by clicking <strong>"Update"</strong> again in the Update Manager (Klipper will attempt to reflash)</li>
-<li>If the error persists, you may need to manually reflash:</li>
+<li>If the error persists, you may need to manually reflash:<ul>
 <li>Mainboard MCU via microSD card</li>
 <li>Toolhead MCU via the flashing guide</li>
+</ul>
+</li>
 <li>Reach out for help if you're unsure (see "Getting Help" section - coming soon)</li>
 </ul>
-<h3 id="screen-firmware-appears-broken-after-interrupted-update">Screen Firmware Appears Broken After Interrupted Update<a class="headerlink" href="#screen-firmware-appears-broken-after-interrupted-update" title="Permanent link">&para;</a></h3>
+</details>
+<details class="bug">
+<summary>Screen Firmware Appears Broken After Interrupted Update</summary>
 <ul>
 <li>Turn the printer off and back on again</li>
 <li>FreeDi will automatically detect the broken firmware state and clear it</li>
 <li>If the screen still doesn't work after a reboot, reach out for help</li>
 </ul>
+</details>
 <hr />
 <h2 id="checking-your-current-freedi-version">Checking Your Current FreeDi Version<a class="headerlink" href="#checking-your-current-freedi-version" title="Permanent link">&para;</a></h2>
 <p>Not sure which version you're running?</p>
