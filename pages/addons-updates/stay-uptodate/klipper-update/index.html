@@ -3478,19 +3478,32 @@ Create a renamed copy in the same folder:</p>
 <details class="info">
 <summary>for X3 Series printers</summary>
 <p>Run:
-<div class="highlight"><pre><span></span><code>~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/X_4.bin -b 500000 /dev/ttyS0 qidi-x-max3
+<div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
+~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/X_4.bin -b 500000 /dev/ttyS0 qidi-x-max3
 </code></pre></div>
 <strong>Tip: the last parameter is <code>qidi-x-max3</code> here. There are also <code>qidi-x-smart3</code> and <code>qidi-x-plus3</code>, but it doesn’t matter which one you use because the mainboards functions are identical.</strong></p>
+<ul>
+<li>Restart Klipper:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo systemctl start klipper
+</code></pre></div>
 </details>
 <details class="info">
 <summary>for Q1 pro &amp; Plus 4 printers:</summary>
 <p>Run:
-<div class="highlight"><pre><span></span><code>~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin /dev/ttyS0 qidi-q1-pro
+<div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
+~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin /dev/ttyS0 qidi-q1-pro
 </code></pre></div>
 or:
-<div class="highlight"><pre><span></span><code>~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin /dev/ttyS0 qidi-plus4-pro
+<div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
+~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin /dev/ttyS0 qidi-plus4
 </code></pre></div>
 <strong>Tip: the last parameter can be any of these 2. It doesn’t matter which one you use because the Q1 pro &amp; Plus 4 mainboards functions are identical.</strong></p>
+<ul>
+<li>Restart Klipper:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo systemctl start klipper
+</code></pre></div>
 </details>
 <hr />
 <h2 id="toolhead-mcu-update-model-specific">Toolhead MCU update (model-specific)<a class="headerlink" href="#toolhead-mcu-update-model-specific" title="Permanent link">&para;</a></h2>
