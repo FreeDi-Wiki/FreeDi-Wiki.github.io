@@ -3298,7 +3298,7 @@ make -j4
 <p>To be able to flash your toolhead, you will need to turn it into what is called "DFU mode" first.</p>
 <p>During this tutorial we will do this once. In the future, this won’t be necessary anymore. Because the bootloader named "katapult“ <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> (formerly known as CanBoot) brings the ability to put microcontrollers in DFU mode without the need of manual intervention.</p>
 <h3 id="installing-katapult">Installing katapult<a class="headerlink" href="#installing-katapult" title="Permanent link">&para;</a></h3>
-<p>Via SSH, connect to your printer with your new credentials then:</p>
+<p>Via SSH, connect to your printer with your credentials, then:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/Arksine/katapult
 cd ~/katapult
 make menuconfig
@@ -3349,7 +3349,7 @@ You should see something like this:
 <hr />
 <details class="abstract">
 <summary>Putting the Toolhead in DFU mode:</summary>
-<p>Put the toolhead board in dfu mode by doing this:<br></p>
+<p>Put the toolhead board in DFU mode by doing this:<br></p>
 <ul>
 <li>Remove the back cover of your toolhead.</li>
 <li>Press and hold the "boot“ button.</li>
@@ -3377,6 +3377,24 @@ systemctl daemon-reload
 <div class="highlight"><pre><span></span><code>sudo cp out/katapult.uf2 /mnt
 sudo umount /mnt
 </code></pre></div></p>
+</details>
+<details class="abstract">
+<summary>Alternative Method for X3 series:</summary>
+<p>Confirm that your toolhead is in BOOT/DFU mode by running:
+<div class="highlight"><pre><span></span><code>lsusb
+</code></pre></div></p>
+<p>You should see this:</p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/16.webp" /></p>
+<p>To flash the katapult bootloader, run:
+<div class="highlight"><pre><span></span><code>cd ~/katapult
+make flash FLASH_DEVICE=2e8a:0003
+</code></pre></div>
+<img alt="image" src="/images/installation/advanced-install/os-firmware/17.webp" /></p>
+<p>To confirm your Katapult flash was successful, run:
+<div class="highlight"><pre><span></span><code>ls /dev/serial/by-id/*
+</code></pre></div>
+You should see this:</p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/11.webp" /></p>
 </details>
 <details class="abstract">
 <summary>Flashing katapult on Plus 4:</summary>
@@ -3459,13 +3477,16 @@ make -j4
 python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_C5DA4D951E145858-if00
 </code></pre></div>
 <ul>
-<li>
-<p>If the update is successful, you should see this:
-<img alt="image" src="/images/installation/advanced-install/os-firmware/12.webp" /></p>
-</li>
-<li>
-<p>Restart Klipper:</p>
-</li>
+<li>If the update is successful, you should see this:
+<img alt="image" src="/images/installation/advanced-install/os-firmware/12.webp" /></li>
+</ul>
+<p>To confirm your Klipper flash was successful, run:
+<div class="highlight"><pre><span></span><code>ls /dev/serial/by-id/*
+</code></pre></div>
+You should now see this:</p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/06.webp" /></p>
+<ul>
+<li>Restart Klipper:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo systemctl start klipper
 </code></pre></div>
