@@ -3409,7 +3409,6 @@
 make menuconfig
 </code></pre></div></p>
 <p>Now set the options to match the reference screenshot:</p>
-<p>Klipper Version 0.13.0-69:</p>
 <div class="z-row z-lg z-h-center z-single zoomi">
   <a href="/images/addons-updates/stay-uptodate/klipper-update/klip013.webp" class="glightbox" data-gallery="solo1">
     <img src="/images/addons-updates/stay-uptodate/klipper-update/klip013.webp">
@@ -3492,11 +3491,11 @@ Create a renamed copy in the same folder:</p>
 <summary>for Q1 pro &amp; Plus 4 printers:</summary>
 <p>Run:
 <div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
-~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin /dev/ttyS0 qidi-q1-pro
+~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin -b 500000 /dev/ttyS0 qidi-q1-pro
 </code></pre></div>
 or:
 <div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
-~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin /dev/ttyS0 qidi-plus4
+~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin -b 500000 /dev/ttyS0 qidi-plus4
 </code></pre></div>
 <strong>Tip: the last parameter can be any of these 2. It doesn’t matter which one you use because the Q1 pro &amp; Plus 4 mainboards functions are identical.</strong></p>
 <ul>
@@ -3539,7 +3538,7 @@ make -j4
 <li>Flash your toolhead with Katapult, replacing the ID with yours:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo service klipper stop
-python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_C5DA4D951E145858-if00
+python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.uf2 -d /dev/serial/by-id/usb-katapult_rp2040_C5DA4D951E145858-if00
 </code></pre></div>
 <ul>
 <li>
@@ -3614,7 +3613,7 @@ make -j4
 <li>Flash your toolhead with Katapult:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo service klipper stop
-python3 ~/katapult/scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.bin
+python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.uf2 -d /dev/ttyS2
 </code></pre></div>
 <ul>
 <li>
@@ -3650,12 +3649,12 @@ make menuconfig
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
 </code></pre></div>
-<p>This generates a <code>klipper.uf2</code> file in <code>~/klipper/out/</code>.</p>
+<p>This generates a <code>klipper.bin</code> file in <code>~/klipper/out/</code>.</p>
 <ul>
 <li>Flash your toolhead with Katapult:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo service klipper stop
-python3 ~/katapult/scripts/flashtool.py -b 500000 -d /dev/ttyS2 -f ~/klipper/out/klipper.bin
+python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ttyS2
 </code></pre></div>
 <ul>
 <li>
