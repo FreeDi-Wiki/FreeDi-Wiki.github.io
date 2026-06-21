@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.webp">
-      <meta name="generator" content="zensical-0.0.43">
+      <meta name="generator" content="zensical-0.0.45">
     
     
       
@@ -3294,12 +3294,26 @@ SAVE_CONFIG
 </div>
 
 <p>Click it to start the calibration and follow the same paper test procedure as Method 1.</p>
+<p>Mainsail's z-offset adjustement window will appear on  screen:</p>
+<div class="z-row z-lg z-h-center z-single">
+  <img src="/images/first-steps/calibration/z-offset-coarse/zoff4.webp">
+</div>
+
+<p>Adjust your z-offset with the buttons, clic ACCEPT to keep the value, then hit the <mark><code>SAVE CONFIGURATION</code></mark> button at the top of your Mainsail interface.</p>
 <hr />
 <div class="admonition info">
 <p class="admonition-title">Verification after setting the Z-offset:</p>
-<p>The value should be saved automatically (or use <mark>SAVE_CONFIG</mark> if using the console method)</p>
+<p>The value should appear at the bottom of your <code>printer.cfg</code> file, in the green lines zone.</p>
 <p>You should now be ready for fine-tuning with test prints.</p>
 <p><strong>Typical Z-offset values:</strong> Between -0.5mm and -3.0mm (varies by printer model and setup)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Quick note:</p>
+<p>Klipper restarts automatically when using the <mark>SAVE_CONFIG</mark> command.</p>
+<p>When saving the new offset, don't worry if you see that Klipper gets disconnected for a few seconds:</p>
+<p><div class="z-row z-lg z-h-center z-single">
+  <img src="/images/first-steps/calibration/z-offset-coarse/zoff5.webp">
+</div></p>
 </div>
 <hr />
 <h4 id="why-not-using-auto-z-calibrate">Why Not Using Auto Z-Calibrate?<a class="headerlink" href="#why-not-using-auto-z-calibrate" title="Permanent link">&para;</a></h4>
@@ -3313,7 +3327,7 @@ SAVE_CONFIG
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ul>
-<li><strong>Make sure you have completed <mark>this step</mark> correctly before the next step</strong> </li>
+<li><strong>Make sure you have completed this step correctly before the next step</strong> </li>
 <li><strong>Fine-Tuning</strong> aims at perfecting your Z-offset using live adjustment aka <mark><strong>babystepping</strong></mark> while printing a test pattern.</li>
 </ul>
 </div>
