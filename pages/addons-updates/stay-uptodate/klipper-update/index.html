@@ -3623,7 +3623,12 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/tty
 <li>If you’re stuck in a loop after a major Klipper update: it’s usually because <strong>one</strong> MCU was updated but another one is still on an older firmware (mainboard + toolhead need to match the host expectations). </li>
 <li>If you want a sanity-check: compare your <code>make menuconfig</code> screen with the reference screenshots for your version and model, then rebuild and flash again.</li>
 </ul>
-<p>If something looks weird: grab a screenshot of the exact Mainsail error and ping me or the community - we'll get you back to printing!</p>
+<div class="admonition tip">
+<p class="admonition-title">If something goes wrong:</p>
+<p>X3 series &amp; Q1 Pro owners can have a look here to try to "reset" the toolhead:
+<a href="/pages/help-community/faq/#my-toolhead-is-only-visible-when-in-boot-mode">Toolhead Troubleshooting</a></p>
+<p>If this doesn't help,take a screenshot of the exact Mainsail error and ping the community - we'll get you back to printing!</p>
+</div>
 <hr />
 <h2 id="restore-freedi-original-toolheads-firmwares">Restore FreeDi original toolheads firmwares<a class="headerlink" href="#restore-freedi-original-toolheads-firmwares" title="Permanent link">&para;</a></h2>
 <p>In case something goes wrong, you can flash your toolhead back to the versions included with FreeDi.</p>
