@@ -3618,13 +3618,29 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/tty
 </details>
 <hr />
 <h2 id="troubleshooting-tips">Troubleshooting tips<a class="headerlink" href="#troubleshooting-tips" title="Permanent link">&para;</a></h2>
-<ul>
-<li>If the mcu error persists after flashing: reboot the printer once, then rcheck Mainsail again to find which MCU(s) is still listed as incompatible.</li>
-<li>If you’re stuck in a loop after a major Klipper update: it’s usually because <strong>one</strong> MCU was updated but another one is still on an older firmware (mainboard + toolhead need to match the host expectations). </li>
-<li>If you want a sanity-check: compare your <code>make menuconfig</code> screen with the reference screenshots for your version and model, then rebuild and flash again.</li>
-</ul>
 <div class="admonition tip">
-<p class="admonition-title">If something goes wrong:</p>
+<p class="admonition-title">If the mcu error persists after flashing:</p>
+<ul>
+<li>reboot the printer once, then rcheck Mainsail again to find which MCU(s) is still listed as incompatible.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">If you’re stuck in a loop after a major Klipper update:</p>
+<ul>
+<li>it’s usually because <strong>one</strong> MCU was updated but another one is still on an older firmware:<ul>
+<li><mark>Mainboard AND Toolhead must match the host expectations.</mark> </li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">If you want a sanity-check:</p>
+<ul>
+<li>compare your <code>make menuconfig</code> screen with the reference screenshots for your version and model, then rebuild and flash again.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Last resort:</p>
 <p>X3 series &amp; Q1 Pro owners can have a look here to try to "reset" the toolhead:
 <a href="/pages/help-community/faq/#my-toolhead-is-only-visible-when-in-boot-mode">Toolhead Troubleshooting</a></p>
 <p>If this doesn't help,take a screenshot of the exact Mainsail error and ping the community - we'll get you back to printing!</p>
