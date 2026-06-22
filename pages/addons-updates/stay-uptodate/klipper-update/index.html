@@ -2228,10 +2228,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#updating-your-mcus-after-a-klipper-version-update" class="md-nav__link">
+  <a href="#updating-after-a-klipper-version-update" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Updating your MCUs after a Klipper version update
+        Updating after a Klipper version update
       </span>
     </span>
   </a>
@@ -2250,15 +2250,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-mainboard-mcu-all-models" class="md-nav__link">
+  <a href="#updating-the-mainboard-mcu" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Updating Mainboard MCU (all models)
+        Updating the Mainboard MCU
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Updating Mainboard MCU (all models)">
+    <nav class="md-nav" aria-label="Updating the Mainboard MCU">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2270,23 +2270,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="STEP 1: Compile the mainboard firmware">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#build-the-firmware" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Build the firmware
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -2297,23 +2280,6 @@
       </span>
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="STEP 2: Copy &amp; rename the firmware file">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rename-the-firmware-file-required" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Rename the firmware file (required)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3083,10 +3049,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#updating-your-mcus-after-a-klipper-version-update" class="md-nav__link">
+  <a href="#updating-after-a-klipper-version-update" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Updating your MCUs after a Klipper version update
+        Updating after a Klipper version update
       </span>
     </span>
   </a>
@@ -3105,15 +3071,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-mainboard-mcu-all-models" class="md-nav__link">
+  <a href="#updating-the-mainboard-mcu" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Updating Mainboard MCU (all models)
+        Updating the Mainboard MCU
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Updating Mainboard MCU (all models)">
+    <nav class="md-nav" aria-label="Updating the Mainboard MCU">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3125,23 +3091,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="STEP 1: Compile the mainboard firmware">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#build-the-firmware" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Build the firmware
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -3152,23 +3101,6 @@
       </span>
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="STEP 2: Copy &amp; rename the firmware file">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rename-the-firmware-file-required" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Rename the firmware file (required)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3375,7 +3307,7 @@
 
 
 <h1 id="updating-klipper">Updating Klipper<a class="headerlink" href="#updating-klipper" title="Permanent link">&para;</a></h1>
-<h2 id="updating-your-mcus-after-a-klipper-version-update">Updating your MCUs after a Klipper version update<a class="headerlink" href="#updating-your-mcus-after-a-klipper-version-update" title="Permanent link">&para;</a></h2>
+<h2 id="updating-after-a-klipper-version-update">Updating after a Klipper version update<a class="headerlink" href="#updating-after-a-klipper-version-update" title="Permanent link">&para;</a></h2>
 <p>This guide explains how to update the firmware on your printer’s microcontrollers after a Klipper update: the <strong>mainboard MCU</strong> and the <strong>toolhead MCU</strong>.</p>
 <p>After some Klipper updates, the communication protocol between host and MCU changes, and older MCU firmware can become incompatible, which triggers errors in Mainsail until you reflash the affected MCU(s). </p>
 <p>Updating Klipper itself follows the usual, well-documented Klipper workflow and is not something special or “FreeDi-specific”. However, since this project is also aimed at beginners (and because it’s simply nice to have the <em>right</em> settings for your exact printer model at hand), I decided to provide this page as a practical step-by-step reference for everyone.</p>
@@ -3395,40 +3327,28 @@
 <p>If you’re unsure whether it’s the mainboard or toolhead that needs an update: Mainsail usually tells you which MCU(s) should be updated.</p>
 </div>
 <hr />
-<h2 id="updating-mainboard-mcu-all-models">Updating Mainboard MCU (all models)<a class="headerlink" href="#updating-mainboard-mcu-all-models" title="Permanent link">&para;</a></h2>
-<p>For all supported models, the <strong>mainboard</strong> firmware update workflow is the same:</p>
-<ul>
-<li>Compile Klipper for the mainboard (<code>make menuconfig</code>, then build).</li>
-<li>Copy the resulting <code>klipper.bin</code> to your PC.</li>
-<li>Rename it to the printer-specific filename and flash it using the “easy” method you already know for your printer.</li>
-</ul>
-<hr />
+<h2 id="updating-the-mainboard-mcu">Updating the Mainboard MCU<a class="headerlink" href="#updating-the-mainboard-mcu" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title"><strong>These steps are the same for all supported printers</strong></p>
+</div>
 <h3 id="step-1-compile-the-mainboard-firmware">STEP 1: Compile the mainboard firmware<a class="headerlink" href="#step-1-compile-the-mainboard-firmware" title="Permanent link">&para;</a></h3>
-<p>Run:
+<details class="abstract">
+<summary>Building Klipper for the mainboard:</summary>
+<p>To build the <mark>klipper.bin</mark> file, run:
 <div class="highlight"><pre><span></span><code>cd ~/klipper
 make menuconfig
 </code></pre></div></p>
-<p>Now set the options to match the reference screenshot:</p>
-<div class="z-row z-lg z-h-center z-single zoomi">
-  <a href="/images/addons-updates/stay-uptodate/klipper-update/klip013.webp" class="glightbox" data-gallery="solo1">
-    <img src="/images/addons-updates/stay-uptodate/klipper-update/klip013.webp">
-  </a>
-</div>
-
-<p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
-<hr />
-<h4 id="build-the-firmware">Build the firmware<a class="headerlink" href="#build-the-firmware" title="Permanent link">&para;</a></h4>
-<p>Run:</p>
-<div class="highlight"><pre><span></span><code>make<span class="w"> </span>clean
-make<span class="w"> </span>-j4
-</code></pre></div>
-<p>This will generate a <strong>klipper.bin</strong> in: <code>/home/mks/klipper/out/</code> <br></p>
-<hr />
+<p>Set everything according to this screenshot:</p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/mcumain.webp" /></p>
+<p>Quit with <span class="keys"><kbd class="key-q">Q</kbd></span> and save with <span class="keys"><kbd class="key-y">Y</kbd></span></p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/QY.webp" /></p>
+<p>Now we clean the workspace first and then compile with all 4 cores:
+<div class="highlight"><pre><span></span><code>make clean
+make -j4
+</code></pre></div></p>
+<p>This will generate the <strong>klipper.bin</strong> file in the <strong>/home/mks/klipper/out/</strong> folder.</p>
+</details>
 <h3 id="step-2-copy-rename-the-firmware-file">STEP 2: Copy &amp; rename the firmware file<a class="headerlink" href="#step-2-copy-rename-the-firmware-file" title="Permanent link">&para;</a></h3>
-<p>You now have the compiled firmware file here: <code>~/klipper/out/klipper.bin</code> <br></p>
-<h4 id="rename-the-firmware-file-required">Rename the firmware file (required)<a class="headerlink" href="#rename-the-firmware-file-required" title="Permanent link">&para;</a></h4>
-<p>Your mainboard will only recognize the update if the file has the correct name. <br>
-Create a renamed copy in the same folder:</p>
 <details class="info">
 <summary>for X3 Series printers:</summary>
 <ul>
@@ -3441,7 +3361,7 @@ Create a renamed copy in the same folder:</p>
 <details class="info">
 <summary>for Q1 pro &amp; Plus 4 printers:</summary>
 <ul>
-<li><strong>the file must be renamed as <mark><strong>qd_mcu.bin</strong></mark></strong></li>
+<li><strong>the file must be renamed as <mark>qd_mcu.bin</mark></strong></li>
 <li>To do this, run:
 <div class="highlight"><pre><span></span><code>cp ~/klipper/out/klipper.bin ~/klipper/out/qd_mcu.bin
 </code></pre></div></li>
@@ -3451,36 +3371,56 @@ Create a renamed copy in the same folder:</p>
 <p class="admonition-title">Tip</p>
 <p><strong>I recommend using <code>cp</code> (as shown) instead of <code>mv</code>, so you keep the original <code>klipper.bin</code> as a fallback.</strong></p>
 </div>
-<hr />
 <h3 id="step-3-flash-the-mainboard-firmware">STEP 3: Flash the mainboard firmware<a class="headerlink" href="#step-3-flash-the-mainboard-firmware" title="Permanent link">&para;</a></h3>
 <p>You have <strong>two</strong> valid ways to flash the mainboard. Pick <strong>A</strong> or <strong>B</strong>.</p>
 <h4 id="way-a-classic-flash-via-microsd-like-first-installation">Way A (classic): Flash via microSD (like first installation)<a class="headerlink" href="#way-a-classic-flash-via-microsd-like-first-installation" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Copy the renamed file (<code>X_4.bin</code> or <code>qd_mcu.bin</code>) to a microSD card.</li>
-<li>Power off the printer.</li>
-<li>Insert the microSD card into the <strong>mainboard microSD card slot</strong>.</li>
-<li>Power on the printer and wait about <strong>~10 seconds</strong>.</li>
-<li>Power off again.</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Recommendation: shut down the printer properly and then power it off (instead of hard cutting power), to reduce the chance of filesystem issues.</strong></p>
-</div>
-<p>Remove the SD card afterwards and boot normally.</p>
-<hr />
+<details class="abstract">
+<summary>Flashing Klipper to the mainboard:</summary>
+<p>Use your favorite program to copy the file you just renamed from the printer into your computer (e.g. WinSCP or Mobaxterm).</p>
+<p>Then:</p>
+<ul>
+<li>
+<p>Format a microSD card as FAT32</p>
+</li>
+<li>
+<p>Copy the <strong>.bin</strong> file in this microSD</p>
+</li>
+<li>
+<p>Shut your printer down and wait at least 30sec.</p>
+</li>
+<li>
+<p>Put the microSD card into the slot of the printer's mainboard.</p>
+</li>
+<li>
+<p>Turn the printer on.</p>
+</li>
+</ul>
+<p>TIP: The mainboard MCU (STM32F402) will now be flashed, which takes about 10 seconds, but make sure to let your printer powered ON for 1 minute, just to be sure.</p>
+<ul>
+<li>Remove the microSD Card from the printer</li>
+</ul>
+</details>
 <h4 id="way-b-no-sd-handling-flash-via-spi-using-klippers-method">Way B (no SD handling): Flash via SPI using Klipper’s Method<a class="headerlink" href="#way-b-no-sd-handling-flash-via-spi-using-klippers-method" title="Permanent link">&para;</a></h4>
-<p>By letting a microSD card inserted in your mainboard, you can flash your mainboard mcu over <strong>SPI</strong> using Klipper’s built-in script. This is based on Klipper’s SD-card update workflow, using <code>flash-sdcard.sh</code>.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Use the original script from Klipper located in <code>~/klipper/scripts/flash-sdcard.sh</code> <mark>not a random copy</mark>!</strong></p>
+<p>By letting a microSD card inserted in your mainboard, you can flash your mainboard mcu over <strong>SPI</strong> using Klipper’s built-in script. This is based on Klipper’s SDcard update workflow, using <code>flash-sdcard.sh</code>.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Use the original script included with Klipper !!! <mark>not a random copy</mark>!!!</strong></p>
 </div>
 <details class="info">
 <summary>for X3 Series printers</summary>
-<p>Run:
+<p>For X-Max 3 run:
 <div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
 ~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/X_4.bin -b 500000 /dev/ttyS0 qidi-x-max3
-</code></pre></div>
-<strong>Tip: the last parameter is <code>qidi-x-max3</code> here. There are also <code>qidi-x-smart3</code> and <code>qidi-x-plus3</code>, but it doesn’t matter which one you use because the mainboards functions are identical.</strong></p>
+</code></pre></div></p>
+<p>For X-Plus 3 run:
+<div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
+~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/X_4.bin -b 500000 /dev/ttyS0 qidi-x-plus3
+</code></pre></div></p>
+<p>For X-Smart 3 run:
+<div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
+~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/X_4.bin -b 500000 /dev/ttyS0 qidi-x-smart3
+</code></pre></div></p>
+<p><strong>Tip: the last parameter can be any of them for X3 series, because the mainboards functions are identical.</strong></p>
 <ul>
 <li>Restart Klipper:</li>
 </ul>
@@ -3489,15 +3429,15 @@ Create a renamed copy in the same folder:</p>
 </details>
 <details class="info">
 <summary>for Q1 pro &amp; Plus 4 printers:</summary>
-<p>Run:
+<p>For Q1 Pro run:
 <div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
 ~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin -b 500000 /dev/ttyS0 qidi-q1-pro
-</code></pre></div>
-or:
+</code></pre></div></p>
+<p>For Plus 4 run:
 <div class="highlight"><pre><span></span><code>sudo systemctl stop klipper
 ~/klipper/scripts/flash-sdcard.sh -f ~/klipper/out/qd_mcu.bin -b 500000 /dev/ttyS0 qidi-plus4
-</code></pre></div>
-<strong>Tip: the last parameter can be any of these 2. It doesn’t matter which one you use because the Q1 pro &amp; Plus 4 mainboards functions are identical.</strong></p>
+</code></pre></div></p>
+<p><strong>Tip: the last parameter can be any of these two. It doesn’t matter which one you use because the Q1 pro &amp; Plus 4 mainboards functions are identical.</strong></p>
 <ul>
 <li>Restart Klipper:</li>
 </ul>
@@ -3523,6 +3463,7 @@ make menuconfig
 <p>Set it according to the screenshot below:
 <img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/x3th013.webp" /></p>
 <p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/QY.webp" /></p>
 <p>Then run:</p>
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3533,7 +3474,7 @@ make -j4
 </ul>
 <div class="highlight"><pre><span></span><code>ls /dev/serial/by-id/*
 </code></pre></div>
-<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/katapult1.webp" /></p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/serialid.webp" /></p>
 <ul>
 <li>Flash your toolhead with Katapult, replacing the ID with yours:</li>
 </ul>
@@ -3543,7 +3484,7 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.uf2 -d /dev/ser
 <ul>
 <li>
 <p>If the update is successful, you should see this:
-<img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/katapult2.webp" /></p>
+<img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/success.webp" /></p>
 </li>
 <li>
 <p>Restart Klipper:</p>
@@ -3563,6 +3504,7 @@ make menuconfig
 <p>Set it according to the screenshot below:
 <img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/x3th013.webp" /></p>
 <p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/QY.webp" /></p>
 <p>Then run:</p>
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3575,7 +3517,7 @@ make -j4
 <li>Press and release the "reset“ button.</li>
 <li>Release the "boot“ button.</li>
 </ul>
-<p><img alt="image" src="/images/home/advanced-install/freeqidi/boot.webp" /></p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/BR.webp" /></p>
 <ul>
 <li>Find the right RP2 partition by running:</li>
 </ul>
@@ -3586,7 +3528,6 @@ make -j4
 <div class="highlight"><pre><span></span><code>sudo cp ~/klipper/out/klipper.uf2 /dev/sda1
 </code></pre></div>
 </details>
-<hr />
 <h3 id="q1-pro-users-steps">Q1 Pro users steps<a class="headerlink" href="#q1-pro-users-steps" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Bonus!</p>
@@ -3604,6 +3545,7 @@ make menuconfig
 <p>Set it according to the screenshot below:
 <img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/q1th013.webp" /></p>
 <p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/QY.webp" /></p>
 <p>Then run:</p>
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3618,7 +3560,7 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.uf2 -d /dev/tty
 <ul>
 <li>
 <p>If the update is successful, you should see this:
-<img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/katapult2.webp" /></p>
+<img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/success.webp" /></p>
 </li>
 <li>
 <p>Restart Klipper:</p>
@@ -3627,7 +3569,6 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.uf2 -d /dev/tty
 <div class="highlight"><pre><span></span><code>sudo systemctl start klipper
 </code></pre></div>
 </details>
-<hr />
 <h3 id="plus4-users-steps">Plus4 users steps<a class="headerlink" href="#plus4-users-steps" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Bonus!</p>
@@ -3645,6 +3586,7 @@ make menuconfig
 <p>Set it according to the screenshot below:
 <img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/p4th013.webp" /></p>
 <p>Save and exit with <span class="keys"><kbd class="key-q">Q</kbd></span> then <span class="keys"><kbd class="key-y">Y</kbd></span></p>
+<p><img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/QY.webp" /></p>
 <p>Then run:</p>
 <div class="highlight"><pre><span></span><code>make clean
 make -j4
@@ -3659,7 +3601,7 @@ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/tty
 <ul>
 <li>
 <p>If the update is successful, you should see this:
-<img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/katapult2.webp" /></p>
+<img alt="image" src="/images/addons-updates/stay-uptodate/klipper-update/success.webp" /></p>
 </li>
 <li>
 <p>Restart Klipper:</p>
