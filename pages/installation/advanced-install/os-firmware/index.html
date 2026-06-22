@@ -3360,12 +3360,12 @@ You should see something like this:
 <li>Release the "boot“ button.</li>
 </ul>
 <p><img alt="image" src="/images/installation/advanced-install/os-firmware/BR.webp" />    </p>
-<p>Find your toolhead ID by running:
-<div class="highlight"><pre><span></span><code>ls /dev/serial/by-id/*
+<p>To confirm your toolhead is in boot mode run:
+<div class="highlight"><pre><span></span><code>lsblk
 </code></pre></div></p>
-<p>You should see this:</p>
-<p><img alt="image" src="/images/installation/advanced-install/os-firmware/katax301.webp" /></p>
-<p>To flash the katapult bootloader, run:
+<p>You should see an <mark>sda</mark> partition. Below the boot partition is <mark>sda1</mark>:</p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/TH_in_boot_mode_sda1.webp" /></p>
+<p>To flash the katapult bootloader, use the commands below, replacing your partition name if it is different from sda1 :
 <div class="highlight"><pre><span></span><code>sudo mount /dev/sda1 /mnt
 systemctl daemon-reload
 </code></pre></div>
@@ -3376,6 +3376,11 @@ systemctl daemon-reload
 <div class="highlight"><pre><span></span><code>sudo cp out/katapult.uf2 /mnt
 sudo umount /mnt
 </code></pre></div></p>
+<p>To confirm your Katapult flash was successful, run:
+<div class="highlight"><pre><span></span><code>ls /dev/serial/by-id/*
+</code></pre></div>
+You should see this:</p>
+<p><img alt="image" src="/images/installation/advanced-install/os-firmware/katax3alt3.webp" /></p>
 </details>
 <details class="abstract">
 <summary>Alternative Method for X3 series:</summary>
